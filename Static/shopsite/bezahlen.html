@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bezahlen | Ziklus Extended</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="mark">Z</span><span>Ziklus Extended</span></a>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a><a href="produkte.html">Produkte</a><a href="shop.html">Shop</a><a href="service.html">Service</a><a href="technologien.html">Technologien</a><a href="karriere.html">Karriere</a><a href="kontakt.html">Kontakt</a><a href="warenkorb.html">Warenkorb (<span data-cart-count>0</span>)</a>
+      </nav>
+    </header>
+    <main class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Checkout</p>
+          <h1>Bezahlvorgang starten</h1>
+          <p>Nach dem Absenden wird auf dem Live-Hosting eine sichere Stripe-Checkout-Seite geoeffnet. Lokal wird ersatzweise eine Demo-Bestellung erzeugt.</p>
+        </div>
+        <div data-checkout></div>
+      </div>
+    </main>
+    <footer class="footer"><div class="container"><span>© 2026 Ziklus Extended GmbH</span><span>Sicherer Checkout via Stripe</span></div></footer>
+    <script src="shop-data.js"></script>
+    <script src="shop.js"></script>
+  </body>
+</html>

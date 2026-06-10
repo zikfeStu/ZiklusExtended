@@ -1,0 +1,567 @@
+:root {
+  --ink: #17202a;
+  --muted: #5c6875;
+  --line: #d8dee6;
+  --panel: #f6f8fa;
+  --brand: #0f5e6f;
+  --brand-dark: #093f4b;
+  --accent: #e2a600;
+  --white: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px clamp(18px, 4vw, 56px);
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  color: var(--white);
+  background: var(--brand);
+  border-radius: 6px;
+  font-size: 20px;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px 16px;
+  font-size: 15px;
+}
+
+.nav a {
+  padding: 8px 0;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--brand-dark);
+  border-color: var(--accent);
+}
+
+.hero {
+  min-height: calc(100vh - 76px);
+  display: grid;
+  align-items: end;
+  background-image: linear-gradient(90deg, rgba(9, 34, 43, 0.86), rgba(9, 34, 43, 0.38), rgba(9, 34, 43, 0.1)), url("assets/ziklus-industrie-bildset.png");
+  background-size: cover;
+  background-position: left top;
+  color: var(--white);
+}
+
+.hero-inner {
+  width: min(1120px, 100%);
+  padding: 84px clamp(18px, 5vw, 64px) 92px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #ffe09a;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+h1 {
+  max-width: 820px;
+  font-size: clamp(42px, 7vw, 76px);
+}
+
+.lead {
+  max-width: 720px;
+  margin: 22px 0 0;
+  font-size: clamp(18px, 2.1vw, 23px);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 11px 18px;
+  border: 1px solid var(--brand);
+  border-radius: 6px;
+  background: var(--brand);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.button.secondary {
+  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.section {
+  padding: 70px clamp(18px, 5vw, 64px);
+}
+
+.section.alt {
+  background: var(--panel);
+}
+
+.container {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.section-head {
+  max-width: 760px;
+  margin-bottom: 34px;
+}
+
+.section-head h2 {
+  font-size: clamp(30px, 4vw, 46px);
+}
+
+.section-head p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.card {
+  overflow: hidden;
+  min-height: 100%;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.shop-card {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.card a {
+  display: grid;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-body {
+  padding: 22px;
+}
+
+.shop-card-body {
+  display: grid;
+  gap: 12px;
+  padding: 22px;
+}
+
+.card-body p,
+.text p,
+.contact-box p {
+  color: var(--muted);
+}
+
+.tile-image,
+.page-image {
+  background-image: url("assets/ziklus-industrie-bildset.png");
+  background-repeat: no-repeat;
+  background-size: 300% 200%;
+}
+
+.tile-image {
+  height: 190px;
+}
+
+.page-image {
+  min-height: 430px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+
+.img-home {
+  background-position: 0 0;
+}
+
+.img-kontakt {
+  background-position: 50% 0;
+}
+
+.img-produkte {
+  background-position: 100% 0;
+}
+
+.img-service {
+  background-position: 0 100%;
+}
+
+.img-technologien {
+  background-position: 50% 100%;
+}
+
+.img-karriere {
+  background-position: 100% 100%;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 42px;
+  align-items: center;
+}
+
+.text h1 {
+  color: var(--brand-dark);
+  font-size: clamp(38px, 5vw, 58px);
+}
+
+.text h2 {
+  margin-top: 28px;
+  font-size: 26px;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.fact {
+  padding: 18px;
+  background: var(--panel);
+  border-left: 4px solid var(--accent);
+}
+
+.fact strong {
+  display: block;
+  font-size: 24px;
+  color: var(--brand-dark);
+}
+
+.contact-box {
+  margin-top: 30px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.contact-box strong {
+  display: block;
+  font-size: 20px;
+}
+
+.tag {
+  width: fit-content;
+  padding: 4px 9px;
+  border-radius: 6px;
+  background: #e8f2f4;
+  color: var(--brand-dark);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.shop-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.button.ghost {
+  background: var(--white);
+  color: var(--brand-dark);
+}
+
+button.button {
+  font: inherit;
+}
+
+.cart-lines,
+.admin-list {
+  display: grid;
+  gap: 14px;
+}
+
+.cart-line,
+.admin-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.cart-line span,
+.admin-row span {
+  display: block;
+  color: var(--muted);
+}
+
+.quantity-control {
+  display: grid;
+  grid-template-columns: 36px 36px 36px;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.quantity-control button {
+  height: 36px;
+  border: 0;
+  background: var(--panel);
+  cursor: pointer;
+  font: inherit;
+}
+
+.cart-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 20px;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.empty-state {
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.admin-row select {
+  min-height: 42px;
+  padding: 8px 10px;
+  border: 1px solid #c3ccd6;
+  border-radius: 6px;
+  background: var(--white);
+  font: inherit;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.contact-links a {
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: var(--panel);
+  color: var(--brand-dark);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact-form {
+  margin-top: 24px;
+  padding: 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.contact-form h2 {
+  margin-bottom: 18px;
+  color: var(--brand-dark);
+  font-size: 26px;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #c3ccd6;
+  border-radius: 6px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: 3px solid rgba(15, 94, 111, 0.18);
+  border-color: var(--brand);
+}
+
+.hidden-field {
+  display: none;
+}
+
+.form-button {
+  width: 100%;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.form-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.list {
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.footer {
+  padding: 30px clamp(18px, 5vw, 64px);
+  background: var(--brand-dark);
+  color: var(--white);
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer a {
+  color: var(--white);
+}
+
+@media (max-width: 880px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav {
+    justify-content: flex-start;
+  }
+
+  .cards,
+  .shop-grid,
+  .split,
+  .facts,
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-line,
+  .admin-row {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .hero {
+    min-height: 720px;
+    background-position: left top;
+  }
+
+  .page-image {
+    min-height: 310px;
+  }
+}
+
+@media (max-width: 520px) {
+  .section {
+    padding-block: 48px;
+  }
+
+  .brand span:last-child {
+    font-size: 18px;
+  }
+
+  .tile-image {
+    height: 160px;
+  }
+}

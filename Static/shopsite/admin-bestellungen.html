@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bestellungen | Ziklus Extended</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="mark">Z</span><span>Ziklus Extended</span></a>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="shop.html">Shop</a><a href="admin-shop.html">Shop Management</a><a class="active" href="admin-bestellungen.html">Bestellungen</a>
+      </nav>
+    </header>
+    <main class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Firmen intern</p>
+          <h1>Offene Bestellungen managen</h1>
+          <p>Hier werden lokale Demo-Bestellungen angezeigt und ihr Status kann angepasst werden. Im Live-Betrieb sollten Stripe-Webhooks die Bestellungen in einer Datenbank speichern.</p>
+        </div>
+        <div data-admin-orders></div>
+      </div>
+    </main>
+    <footer class="footer"><div class="container"><span>© 2026 Ziklus Extended GmbH</span><span><a href="admin-shop.html">Shop Management</a></span></div></footer>
+    <script src="shop-data.js"></script>
+    <script src="shop.js"></script>
+  </body>
+</html>
