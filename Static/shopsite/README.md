@@ -1,6 +1,6 @@
 # Ziklus Extended Website
 
-Statische Unternehmenswebsite für das fiktive Maschinenbauunternehmen **Ziklus Extended**.
+Unternehmenswebsite für das fiktive Maschinenbauunternehmen **Ziklus Extended**.
 
 ## Seiten
 
